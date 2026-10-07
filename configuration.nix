@@ -112,6 +112,17 @@
   # Enable niri.
   programs.niri.enable = true;
 
+  # Enable ly.
+  services.displayManager.ly = {
+    enable = true;
+    settings = {
+      bigclock = "en";
+      clock = "%A, %d %B %Y";
+      animation = "colormix";
+      hide_borders = false;
+    };
+  };
+
   # Enable Nix Helper.
   programs.nh = {
     enable = true;
