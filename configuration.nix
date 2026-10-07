@@ -42,9 +42,23 @@
   # Enable flakes.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Use the GRUB EFI boot loader.
+  boot.loader = {
+    systemd-boot.enable = false;
+    efi.canTouchEfiVariables = true;
+    timeout = 5;
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+      useOSProber = true;
+      configurationLimit = 10;
+    };
+  };
+
+  boot.supportedFilesystems = [ "ntfs" ];
+  time.hardwareClockInLocalTime = true;
+  services.btrfs.autoScrub.enable = true;
 
   networking.hostName = "nykr"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
