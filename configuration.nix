@@ -125,6 +125,7 @@
   
   # Enable niri.
   programs.niri.enable = true;
+  programs.niri.package = pkgs.niri;
 
   # Enable ly.
   services.displayManager.ly = {
