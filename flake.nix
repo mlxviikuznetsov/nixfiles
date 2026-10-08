@@ -7,10 +7,12 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     niri.url = "github:sodiboo/niri-flake";
     niri.inputs.nixpkgs.follows = "nixpkgs";
+    stylix.url = "github:nix-community/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, niri, ... }:
+    inputs@{ nixpkgs, home-manager, niri, stylix, ... }:
     {
       nixosConfigurations = {
         nykr = nixpkgs.lib.nixosSystem {
@@ -19,12 +21,14 @@
           modules = [
             ./configuration.nix
 	    niri.nixosModules.niri
+	    stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.users.kirigirisu = ./home.nix;
+	      home-manager.backupFileExtension = "backup";
             }
           ];
         };

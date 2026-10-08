@@ -143,6 +143,12 @@
     enable = true;
     flake = "/home/kirigirisu/nixfiles";
   };
+
+  # Enable stylix.
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/framer.yaml";
+  };
   
   # Install fonts.
   fonts.packages = with pkgs; [
