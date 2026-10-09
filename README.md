@@ -7,6 +7,11 @@
 - `configuration.nix`
 - `hardware-configuration.nix`
 - `home.nix`
+- `home-manager/`
+  - `git.nix`
+  - `niri.nix`
+  - `neovim.nix`
+  - `obs-studio.nix`
 - `flake.nix`
 - `flake.lock`
 
