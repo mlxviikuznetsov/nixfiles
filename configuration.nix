@@ -133,7 +133,7 @@
     settings = {
       bigclock = "en";
       clock = "%A, %d %B %Y";
-      animation = "colormix";
+      animation = "matrix";
       hide_borders = false;
     };
   };
