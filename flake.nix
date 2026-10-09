@@ -9,6 +9,8 @@
     niri.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
+    noctalia.url = "github:noctalia-dev/noctalia";
+    noctalia.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -20,6 +22,7 @@
 	  specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix
+	    ./noctalia.nix
 	    niri.nixosModules.niri
 	    stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager

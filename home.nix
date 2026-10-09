@@ -9,15 +9,10 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     htop
-    fortune
     nnn
     wl-clipboard
     telegram-desktop
     spotify
-    swaybg
-    grim
-    slurp
-    bluetui
   ];
 
   # Import the default niri-flake conifg.
@@ -37,10 +32,7 @@
   #   enableSshSupport = true;
   # };
   programs.alacritty.enable = true;
-  programs.waybar.enable = true;
   programs.firefox.enable = true;
-  services.mako.enable = true;
-  programs.fuzzel.enable = true;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
