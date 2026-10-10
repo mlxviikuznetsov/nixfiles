@@ -9,11 +9,17 @@
 - `home.nix`
 - `home-manager/`
   - `git.nix`
+  - `zsh.nix`
   - `niri.nix`
   - `neovim.nix`
+  - `alacritty.nix`
+  - `fastfetch.nix`
   - `obs-studio.nix`
+- `noctalia.nix`
 - `flake.nix`
 - `flake.lock`
+- `wallpapers/`
+  - `nixos.png` 
 
 ## Overview
 
