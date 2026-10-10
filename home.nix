@@ -22,6 +22,7 @@
     ./home-manager/zsh.nix
     ./home-manager/niri.nix
     ./home-manager/neovim.nix
+    ./home-manager/alacritty.nix
     ./home-manager/fastfetch.nix
     ./home-manager/obs-studio.nix
   ];
@@ -33,7 +34,6 @@
   #   defaultCacheTtl = 1800;
   #   enableSshSupport = true;
   # };
-  programs.alacritty.enable = true;
   programs.firefox.enable = true;
 
   # This value determines the Home Manager release that your

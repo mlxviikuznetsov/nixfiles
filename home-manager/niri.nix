@@ -26,6 +26,19 @@ in
       }
     ];
 
+    # Set window rules.
+    window-rules = [
+      {
+        geometry-corner-radius = {
+          top-left = 12.0;
+          top-right = 12.0;
+          bottom-left = 12.0;
+          bottom-right = 12.0;
+        };
+        clip-to-geometry = true;
+      }
+    ];
+
     binds = {
       # Noctalia
       "Mod+D".action.spawn = noctalia "panel-toggle launcher";
