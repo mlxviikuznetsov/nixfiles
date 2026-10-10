@@ -1,4 +1,4 @@
-# Dotfiles
+# Nixfiles
 
 > _Die Kunst und **Nix** als die Kunst!_
 
