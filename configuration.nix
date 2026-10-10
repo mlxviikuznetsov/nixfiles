@@ -166,11 +166,22 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/framer.yaml";
     fonts = {
+      sansSerif = {
+        package = pkgs.nerd-fonts.iosevka;
+        name = "Iosevka Nerd Font";
+      };
+      serif = {
+        package = pkgs.nerd-fonts.iosevka;
+        name = "Iosevka Nerd Font";
+      };
       monospace = {
         package = pkgs.nerd-fonts.iosevka-term;
         name = "IosevkaTerm Nerd Font";
       };
-      sizes.terminal = 11;
+      sizes = {
+	applications = 12;
+        terminal = 10;
+      };
     };
   };
 

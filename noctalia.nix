@@ -11,6 +11,7 @@
       enable = true;
       settings = {
         # Configure options
+	shell.font = "Iosevka Nerd Font";
 	wallpaper = {
 	  enabled = true;
           directory = "/home/kirigirisu/nixfiles/wallpapers/";
