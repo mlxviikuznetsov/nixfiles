@@ -28,4 +28,9 @@
 
 ## Overview
 
+<img width="1920" height="1080" alt="nykr" src="https://github.com/user-attachments/assets/eef059b7-4a7d-4cf0-b2d7-2f9d27867d2f" />
+<p align="center">
+  <samp>kirigirisu@nykr</samp>
+</p>
+
 This is my very first NixOS configuration; it will improve gradually.
