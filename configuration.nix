@@ -112,7 +112,6 @@
     wget
     curl
     git
-    fastfetch
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -180,7 +179,7 @@
       };
       sizes = {
 	applications = 12;
-        terminal = 10;
+        terminal = 14;
       };
     };
   };

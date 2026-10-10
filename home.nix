@@ -22,6 +22,7 @@
     ./home-manager/zsh.nix
     ./home-manager/niri.nix
     ./home-manager/neovim.nix
+    ./home-manager/fastfetch.nix
     ./home-manager/obs-studio.nix
   ];
 
