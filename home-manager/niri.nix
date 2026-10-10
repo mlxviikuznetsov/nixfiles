@@ -10,8 +10,8 @@ in
     overview.workspace-shadow.enable = false;
   
     input.keyboard.xkb = {
-      layout = "us,ru";
-      options = "grp:caps_toggle";
+      layout = "pl,ru";
+      options = "grp:caps_toggle,compose:rctrl";
     };
   
     spawn-at-startup = [
@@ -39,9 +39,12 @@ in
       }
     ];
 
+    # Don't show hotkey overlay on startup.
+    hotkey-overlay.skip-at-startup = true;
+
     binds = {
       # Noctalia
-      "Mod+D".action.spawn = noctalia "panel-toggle launcher";
+      "Mod+Space".action.spawn = noctalia "panel-toggle launcher";
       "Mod+S".action.spawn = noctalia "panel-toggle control-center";
       "Mod+Shift+S".action.spawn = noctalia "settings-toggle";
       "Mod+Alt+L".action.spawn = noctalia "session lock";
@@ -61,8 +64,12 @@ in
       "Mod+Shift+F".action.fullscreen-window = [];
       "Mod+R".action.switch-preset-column-width = [];
       "Mod+C".action.center-column = [];
+      "Mod+V".action.toggle-window-floating = [];
+      "Mod+Shift+V".action.switch-focus-between-floating-and-tiling = [];
       "Mod+Comma".action.consume-window-into-column = [];
       "Mod+Period".action.expel-window-from-column = [];
+      "Mod+BracketLeft".action.consume-or-expel-window-left = [];
+      "Mod+BracketRight".action.consume-or-expel-window-right = [];
       "Mod+Minus".action.set-column-width = "-10%";
       "Mod+Equal".action.set-column-width = "+10%";
       "Mod+Shift+Minus".action.set-window-height = "-10%";
@@ -148,6 +155,7 @@ in
   
       # Session
       "Mod+Shift+E".action.quit = [];
+      "Mod+Escape".action.spawn = noctalia "panel-toggle session";
     };
   };
 }
