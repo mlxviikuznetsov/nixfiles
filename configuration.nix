@@ -144,6 +144,9 @@
     flake = "/home/kirigirisu/nixfiles";
   };
 
+  # Enable UPower.
+  services.upower.enable = true;
+
   # Enable XDG Desktop Portals.
   xdg.portal = {
     enable = true;
