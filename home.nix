@@ -19,6 +19,7 @@
   # imports = [ (import "${inputs.niri}/default-config.kdl.nix" inputs) ];
   imports = [
     ./home-manager/git.nix
+    ./home-manager/zsh.nix
     ./home-manager/niri.nix
     ./home-manager/neovim.nix
     ./home-manager/obs-studio.nix

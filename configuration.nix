@@ -157,6 +157,10 @@
     config.common.default = [ "gtk" "gnome" ];
   };
 
+  # Enable zsh.
+  programs.zsh.enable = true;
+  users.users.kirigirisu.shell = pkgs.zsh;
+
   # Enable stylix.
   stylix = {
     enable = true;
