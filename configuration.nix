@@ -165,7 +165,15 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/framer.yaml";
+    fonts = {
+      monospace = {
+        package = pkgs.nerd-fonts.iosevka-term;
+        name = "IosevkaTerm Nerd Font";
+      };
+      sizes.terminal = 11;
+    };
   };
+
   
   # Install fonts.
   fonts.packages = with pkgs; [
