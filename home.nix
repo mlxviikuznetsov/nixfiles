@@ -13,6 +13,7 @@
     wl-clipboard
     telegram-desktop
     spotify
+    uv
   ];
 
   # Import the default niri-flake conifg.

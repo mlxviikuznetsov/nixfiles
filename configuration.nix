@@ -114,6 +114,9 @@
     git
   ];
 
+  # Set localBinInPath, because uv will install binaries in ~/.local/bin.
+  environment.localBinInPath = true;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -142,6 +145,9 @@
     enable = true;
     flake = "/home/kirigirisu/nixfiles";
   };
+
+  # Enable nix-ld.
+  programs.nix-ld.enable = true;
 
   # Enable UPower.
   services.upower.enable = true;
