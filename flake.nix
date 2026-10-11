@@ -36,5 +36,11 @@
           ];
         };
       };
+      templates = {
+        rust = {
+          path = ./templates/rust;
+          description = "Rust dev shell";
+        };
+      };
     };
 }
