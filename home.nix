@@ -26,6 +26,7 @@
     ./home-manager/alacritty.nix
     ./home-manager/fastfetch.nix
     ./home-manager/obs-studio.nix
+    ./home-manager/direnv.nix
   ];
 
   # Customize modules here.
