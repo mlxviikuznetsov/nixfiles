@@ -46,6 +46,8 @@ in
       # Noctalia
       "Mod+Space".action.spawn = noctalia "panel-toggle launcher";
       "Mod+S".action.spawn = noctalia "panel-toggle control-center";
+      "Mod+B".action.spawn = noctalia "panel-toggle control-center bluetooth";
+      "Mod+N".action.spawn = noctalia "panel-toggle control-center notifications";
       "Mod+Shift+S".action.spawn = noctalia "settings-toggle";
       "Mod+Alt+L".action.spawn = noctalia "session lock";
       "XF86AudioRaiseVolume".action.spawn = noctalia "volume-up";
