@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -38,6 +38,9 @@
 
   # Allow unfree software.
   nixpkgs.config.allowUnfree = true;
+
+  # Add overlays.
+  nixpkgs.overlays = [ inputs.neorg-overlay.overlays.default ];
 
   # Enable flakes.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
