@@ -23,7 +23,17 @@
               ["core.defaults"] = {},
               ["core.concealer"] = {},
               ["core.dirman"] = {
-                config = { workspaces = { notes = "~/notes" } },
+                config = {
+                  workspaces = {
+                    notes = "~/notes/general",
+                  },
+                  default_workspace = "notes",
+                },
+              },
+              ["core.journal"] = {
+                config = {
+                  journal_directory = "~/notes/journal",
+                },
               },
 	      ["core.integrations.telescope"] = {
                 config = {
@@ -58,7 +68,7 @@
       vim.opt.conceallevel = 3
 
       vim.g.mapleader = " "
-      vim.g.maplocalleader = ","
+      vim.g.maplocalleader = ";"
 
       vim.lsp.inlay_hint.enable(true)
 
@@ -74,6 +84,13 @@
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
       end, { desc = "Toggle inlay hints" })
 
+      vim.keymap.set("n", "<localleader>ng", "<cmd>Neorg workspace<CR>")
+      vim.keymap.set("n", "<localleader>ni", "<cmd>Neorg index<CR>")
+      vim.keymap.set("n", "<localleader>nt", "<cmd>Neorg toc<CR>")
+      vim.keymap.set("n", "<localleader>nj", "<cmd>Neorg journal<CR>")
+      vim.keymap.set("n", "<localleader>nr", "<cmd>Neorg return<CR>")
+      vim.keymap.set("n", "<localleader>nn", "<Plug>(neorg.dirman.new-note)")
+      vim.keymap.set("n", "<localleader>nf", "<cmd>Telescope neorg find_norg_files<CR>")
     
       -- Completion
       local cmp = require("cmp")
