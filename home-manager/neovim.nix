@@ -49,6 +49,7 @@
 
     initLua = ''
       vim.opt.number = true
+      vim.opt.conceallevel = 3
       vim.g.mapleader = " "
       vim.g.maplocalleader = ","
       vim.lsp.inlay_hint.enable(true)
