@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     htop
     nnn
+    ripgrep
     wl-clipboard
     telegram-desktop
     spotify

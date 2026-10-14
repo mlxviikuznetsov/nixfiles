@@ -49,6 +49,21 @@
 
     initLua = ''
       vim.opt.number = true
+      vim.g.mapleader = " "
+      vim.lsp.inlay_hint.enable(true)
+
+      -- Keybinds
+      local tb = require("telescope.builtin")
+      vim.keymap.set("n", "<leader>ff", tb.find_files)
+      vim.keymap.set("n", "<leader>fg", tb.live_grep)
+      vim.keymap.set("n", "<leader>fb", tb.buffers)
+      vim.keymap.set("n", "<leader>fh", tb.help_tags)
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+
+      vim.keymap.set("n", "<leader>th", function()
+        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+      end, { desc = "Toggle inlay hints" })
+
     
       -- Completion
       local cmp = require("cmp")
