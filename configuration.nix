@@ -184,7 +184,7 @@
       };
       monospace = {
         package = pkgs.nerd-fonts.iosevka-term;
-        name = "IosevkaTerm Nerd Font";
+        name = "IosevkaTerm Nerd Font Mono";
       };
       sizes = {
 	applications = 12;
