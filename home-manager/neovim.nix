@@ -50,6 +50,7 @@
     initLua = ''
       vim.opt.number = true
       vim.g.mapleader = " "
+      vim.g.maplocalleader = ","
       vim.lsp.inlay_hint.enable(true)
 
       -- Keybinds
