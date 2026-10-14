@@ -11,7 +11,7 @@
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     noctalia.url = "github:noctalia-dev/noctalia";
     noctalia.inputs.nixpkgs.follows = "nixpkgs";
-    neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
+    neorg-overlay.url = "github:mlxviikuznetsov/nixpkgs-neorg-overlay";
   };
 
   outputs =
