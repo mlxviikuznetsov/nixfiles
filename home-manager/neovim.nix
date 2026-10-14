@@ -48,10 +48,18 @@
     ];
 
     initLua = ''
+      -- Options
       vim.opt.number = true
+      vim.opt.relativenumber = true
+      vim.opt.cursorline = true
+      vim.opt.scrolloff = 8
+      vim.opt.shiftwidth = 2
+      vim.opt.expandtab = true
       vim.opt.conceallevel = 3
+
       vim.g.mapleader = " "
       vim.g.maplocalleader = ","
+
       vim.lsp.inlay_hint.enable(true)
 
       -- Keybinds
