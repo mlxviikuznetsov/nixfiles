@@ -37,8 +37,19 @@
   #   defaultCacheTtl = 1800;
   #   enableSshSupport = true;
   # };
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    profiles.kirigirisu = {
+      id = 0;
+      isDefault = true;
+    };
+  };
   programs.gh.enable = true;
+
+  stylix.targets = {
+    firefox.profileNames = [ "kirigirisu" ];
+    rofi.enable = false;
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
