@@ -25,14 +25,14 @@
               ["core.dirman"] = {
                 config = {
                   workspaces = {
-                    notes = "~/notes/general",
+                    notes = "~/notes",
                   },
                   default_workspace = "notes",
                 },
               },
               ["core.journal"] = {
                 config = {
-                  journal_directory = "~/notes/journal",
+                  journal_folder = "journal",
                 },
               },
 	      ["core.integrations.telescope"] = {
