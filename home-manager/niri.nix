@@ -9,9 +9,14 @@ in
     layout.background-color = "transparent";
     overview.workspace-shadow.enable = false;
   
-    input.keyboard.xkb = {
-      layout = "pl,ru";
-      options = "grp:caps_toggle,compose:rctrl";
+    input = {
+      keyboard.xkb = {
+        layout = "pl,ru";
+        options = "grp:caps_toggle,compose:rctrl";
+      };
+      touchpad = {
+        enable = false;
+      };
     };
   
     spawn-at-startup = [
