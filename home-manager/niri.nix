@@ -62,7 +62,7 @@ in
       "XF86MonBrightnessDown".action.spawn = noctalia "brightness-down";
 
       # Programs
-      "Mod+T".action.spawn = "alacritty";
+      "Mod+Return".action.spawn = "alacritty";
       "Mod+Shift+Slash".action.show-hotkey-overlay = [];
   
       # Windows
