@@ -7,7 +7,14 @@
 [![Neovim](https://img.shields.io/badge/Neovim-0f191f?style=for-the-badge&logo=neovim)](https://neovim.io)
 [![Zsh](https://img.shields.io/badge/Zsh-ffffff?style=for-the-badge&logo=zsh)](https://www.zsh.org)
 
-## Contents
+| Table of Contents |
+| :---: |
+| [Structure](#structure) |
+| [Overview](#overview) |
+| [Installation](#installation) |
+| [Templates](#templates) |
+
+## Structure
 
 - `flake.nix`, `flake.lock`: inputs and outputs (NixOS config + templates)
 - `configuration.nix`: system-level configuration
