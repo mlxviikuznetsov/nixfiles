@@ -13,6 +13,7 @@
     ripgrep
     wl-clipboard
     telegram-desktop
+    libreoffice-fresh
     spotify
     uv
   ];
