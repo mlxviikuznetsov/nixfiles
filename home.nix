@@ -12,8 +12,10 @@
     nnn
     ripgrep
     wl-clipboard
+    xwayland-satellite
     telegram-desktop
     libreoffice-fresh
+    musescore
     spotify
     uv
   ];
