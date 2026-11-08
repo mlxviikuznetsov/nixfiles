@@ -107,6 +107,12 @@
         org_default_notes_file = "~/orgfiles/refile.org",
         org_startup_indented = true,
         org_hide_leading_stars = true,
+        org_agenda_time_grid = {
+          type = { 'today', 'require-timed', 'remove-match', 'remove-range-match' },
+          times = { 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200},
+          time_separator = '┄┄┄┄┄',
+          time_label = '┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄',
+        },
       })
     '';
   };
