@@ -39,9 +39,6 @@
   # Allow unfree software.
   nixpkgs.config.allowUnfree = true;
 
-  # Add overlays.
-  nixpkgs.overlays = [ inputs.neorg-overlay.overlays.default ];
-
   # Enable flakes.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

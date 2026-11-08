@@ -14,39 +14,7 @@
       cmp_luasnip
       conform-nvim
       telescope-nvim
-      {
-        plugin = neorg;
-        type = "lua";
-        config = ''
-          require("neorg").setup {
-            load = {
-              ["core.defaults"] = {},
-              ["core.concealer"] = {},
-              ["core.dirman"] = {
-                config = {
-                  workspaces = {
-                    notes = "~/notes",
-                  },
-                  default_workspace = "notes",
-                },
-              },
-              ["core.journal"] = {
-                config = {
-                  journal_folder = "journal",
-                },
-              },
-	      ["core.integrations.telescope"] = {
-                config = {
-                  insert_file_link = {
-                    show_title_preview = true,
-                  },
-                },
-              },
-            },
-          }
-        '';
-      }
-      neorg-telescope
+      orgmode
       (nvim-treesitter.withPlugins (p: [
         p.rust
         p.toml
@@ -84,14 +52,6 @@
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
       end, { desc = "Toggle inlay hints" })
 
-      vim.keymap.set("n", "<localleader>ng", "<cmd>Neorg workspace<CR>")
-      vim.keymap.set("n", "<localleader>ni", "<cmd>Neorg index<CR>")
-      vim.keymap.set("n", "<localleader>nt", "<cmd>Neorg toc<CR>")
-      vim.keymap.set("n", "<localleader>nj", "<cmd>Neorg journal<CR>")
-      vim.keymap.set("n", "<localleader>nr", "<cmd>Neorg return<CR>")
-      vim.keymap.set("n", "<localleader>nn", "<Plug>(neorg.dirman.new-note)")
-      vim.keymap.set("n", "<localleader>nf", "<cmd>Telescope neorg find_norg_files<CR>")
-    
       -- Completion
       local cmp = require("cmp")
     
@@ -140,6 +100,15 @@
           lsp_format = "fallback",
         },
       })
+
+      -- Org
+      require("orgmode").setup({
+        org_agenda_files = "~/orgfiles/**/*",
+        org_default_notes_file = "~/orgfiles/refile.org",
+      })
     '';
   };
+
+  xdg.configFile."nvim/parser/org.so".source =
+    "${pkgs.tree-sitter-grammars.tree-sitter-org-nvim}/parser";
 }
