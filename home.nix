@@ -17,6 +17,7 @@
     libreoffice-fresh
     musescore
     spotify
+    foliate
     uv
   ];
 
@@ -52,6 +53,14 @@
   stylix.targets = {
     firefox.profileNames = [ "kirigirisu" ];
     rofi.enable = false;
+  };
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
+    };
   };
 
   # This value determines the Home Manager release that your
