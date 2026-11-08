@@ -50,6 +50,8 @@
   };
   programs.gh.enable = true;
 
+  services.syncthing.enable = true;
+
   stylix.targets = {
     firefox.profileNames = [ "kirigirisu" ];
     rofi.enable = false;
