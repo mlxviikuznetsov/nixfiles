@@ -16,6 +16,7 @@
     telegram-desktop
     libreoffice-fresh
     musescore
+    audacity
     spotify
     foliate
     uv
