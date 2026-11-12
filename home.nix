@@ -19,6 +19,8 @@
     audacity
     ardour
     qpwgraph
+    lsp-plugins
+    surge-xt
     geonkick
     spotify
     foliate
