@@ -112,6 +112,7 @@
     wget
     curl
     git
+    pipewire.jack
   ];
 
   # Set localBinInPath, because uv will install binaries in ~/.local/bin.
@@ -173,7 +174,6 @@
     enable = true;
     alsa.enable = true;
     pulse.enable = true;
-    jack.enable = true;
   };
 
   # Enable RealtimeKit.

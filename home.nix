@@ -14,7 +14,7 @@
     wl-clipboard
     xwayland-satellite
     telegram-desktop
-    libreoffice-fresh
+    libreoffice
     musescore
     audacity
     ardour
