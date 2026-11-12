@@ -18,6 +18,7 @@
     musescore
     audacity
     ardour
+    qpwgraph
     geonkick
     spotify
     foliate
