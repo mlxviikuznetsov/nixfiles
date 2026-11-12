@@ -18,6 +18,7 @@
     musescore
     audacity
     ardour
+    geonkick
     spotify
     foliate
     uv

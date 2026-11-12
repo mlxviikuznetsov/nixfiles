@@ -11,10 +11,12 @@
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     noctalia.url = "github:noctalia-dev/noctalia";
     noctalia.inputs.nixpkgs.follows = "nixpkgs";
+    musnix.url = "github:musnix/musnix";
+    musnix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, niri, stylix, ... }:
+    inputs@{ nixpkgs, home-manager, niri, stylix, musnix, ... }:
     {
       nixosConfigurations = {
         nykr = nixpkgs.lib.nixosSystem {
@@ -25,6 +27,7 @@
 	    ./noctalia.nix
 	    niri.nixosModules.niri
 	    stylix.nixosModules.stylix
+            musnix.nixosModules.musnix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;

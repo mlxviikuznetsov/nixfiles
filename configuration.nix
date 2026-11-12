@@ -117,10 +117,21 @@
   # Set localBinInPath, because uv will install binaries in ~/.local/bin.
   environment.localBinInPath = true;
 
+  # Set session variables.
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     QT_QPA_PLATFORM = "wayland;xcb";
+    LV2_PATH  = "/run/current-system/sw/lib/lv2:/etc/profiles/per-user/$USER/lib/lv2";
+    VST3_PATH = "/run/current-system/sw/lib/vst3:/etc/profiles/per-user/$USER/lib/vst3";
+    CLAP_PATH = "/run/current-system/sw/lib/clap:/etc/profiles/per-user/$USER/lib/clap";
   };
+
+  # Set pathsToLink.
+  environment.pathsToLink = [
+    "/lib/lv2"
+    "/lib/vst3"
+    "/lib/clap"
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -181,6 +192,9 @@
   # Enable zsh.
   programs.zsh.enable = true;
   users.users.kirigirisu.shell = pkgs.zsh;
+
+  # Enable musnix.
+  musnix.enable = true;
 
   # Enable stylix.
   stylix = {
