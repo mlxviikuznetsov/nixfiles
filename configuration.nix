@@ -101,7 +101,7 @@
   users.users."kirigirisu" = {
     isNormalUser = true;
     description = "Maximilian Kuzniatsou";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
     packages = with pkgs; [];
   };
 
@@ -117,7 +117,10 @@
   # Set localBinInPath, because uv will install binaries in ~/.local/bin.
   environment.localBinInPath = true;
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    QT_QPA_PLATFORM = "wayland;xcb";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -153,6 +156,17 @@
 
   # Enable UPower.
   services.upower.enable = true;
+
+  # Enable PipeWire.
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  # Enable RealtimeKit.
+  security.rtkit.enable = true;
 
   # Enable XDG Desktop Portals.
   xdg.portal = {

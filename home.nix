@@ -17,6 +17,7 @@
     libreoffice-fresh
     musescore
     audacity
+    ardour
     spotify
     foliate
     uv
