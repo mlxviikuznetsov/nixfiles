@@ -19,7 +19,7 @@
 - `flake.nix`, `flake.lock`: inputs and outputs (NixOS config + templates)
 - `configuration.nix`: system-level configuration
 - `hardware-configuration.nix`: hardware config for `nykr` (I run it on ThinkPad T480)
-- `noctalia.nix`: Noctalia shell configuration
+- `modules/noctalia.nix`: Noctalia shell configuration
 - `home.nix`: Home Manager entry point
 - `home-manager/`: per-program modules (
   - `git.nix`,
