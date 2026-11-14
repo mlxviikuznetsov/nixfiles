@@ -16,6 +16,7 @@
     wl-clipboard
     xwayland-satellite
     telegram-desktop
+    whatsapp-electron
     libreoffice
     musescore
     audacity
