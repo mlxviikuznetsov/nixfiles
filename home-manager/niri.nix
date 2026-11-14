@@ -21,6 +21,8 @@ in
         middle-emulation = true;
         scroll-method = "on-button-down";
         scroll-button = 273;
+        accel-speed = -0.5;
+        accel-profile = "flat";
       };
     };
 
