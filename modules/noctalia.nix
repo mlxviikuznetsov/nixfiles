@@ -18,7 +18,7 @@
           fill_mode = "crop";
 
           default = {
-            path = "/home/kirigirisu/nixfiles/wallpapers/nixos.png";
+            path = "/home/kirigirisu/nixfiles/wallpapers/nixos02.png";
           };
 	};
       };
