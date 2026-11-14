@@ -199,7 +199,7 @@
   # Enable stylix.
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/framer.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal-immortal.yaml";
     fonts = {
       sansSerif = {
         package = pkgs.nerd-fonts.iosevka;
