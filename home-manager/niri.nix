@@ -17,6 +17,11 @@ in
       touchpad = {
         enable = false;
       };
+      mouse = {
+        middle-emulation = true;
+        scroll-method = "on-button-down";
+        scroll-button = 273;
+      };
     };
 
     outputs."eDP-1" = {
