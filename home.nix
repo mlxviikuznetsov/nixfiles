@@ -10,6 +10,8 @@
   home.packages = with pkgs; [
     btop
     nnn
+    mpv
+    ffmpeg
     ripgrep
     wl-clipboard
     xwayland-satellite
@@ -20,6 +22,7 @@
     ardour
     qpwgraph
     lsp-plugins
+    sonic-visualiser
     surge-xt
     geonkick
     spotify
