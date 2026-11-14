@@ -36,7 +36,7 @@
 
 ## Overview
 
-<img width="1920" height="1080" alt="nykr" src="https://github.com/user-attachments/assets/eef059b7-4a7d-4cf0-b2d7-2f9d27867d2f" />
+<img width="1920" height="1080" alt="nykr" src="https://github.com/user-attachments/assets/d89f744c-4a62-4223-98b2-9f89f1deff9b" />
 <p align="center">
   <samp>kirigirisu@nykr</samp>
 </p>
