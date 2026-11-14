@@ -24,6 +24,7 @@
 - `home-manager/`: per-program modules (
   - `git.nix`,
   - `zsh.nix`,
+  - `direnv.nix`,
   - `niri.nix`,
   - `neovim.nix`,
   - `alacritty.nix`,
