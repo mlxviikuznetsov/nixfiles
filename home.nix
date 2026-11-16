@@ -10,7 +10,6 @@
   home.packages = with pkgs; [
     btop
     nnn
-    mpv
     ffmpeg
     ripgrep
     wl-clipboard
@@ -61,6 +60,12 @@
     };
   };
   programs.gh.enable = true;
+  programs.mpv = {
+    enable = true;
+    config = {
+      osc = false;
+    };
+  };
 
   services.syncthing.enable = true;
 
