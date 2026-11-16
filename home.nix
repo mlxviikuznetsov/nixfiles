@@ -70,8 +70,8 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
     };
   };
 
