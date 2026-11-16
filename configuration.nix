@@ -36,8 +36,28 @@
   # Enable all firmware.
   hardware.enableAllFirmware = true;
 
+  # Enable GPU driver.
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+    ];
+  };
+
   # Allow unfree software.
   nixpkgs.config.allowUnfree = true;
+
+  # Remove virtual monitor from xdg-desktop-portal-gnome.
+  nixpkgs.overlays = [
+    (final: prev: {
+      xdg-desktop-portal-gnome = prev.xdg-desktop-portal-gnome.overrideAttrs (oldAttrs: {
+        postPatch = (oldAttrs.postPatch or "") + ''
+          substituteInPlace src/screencast.c \
+            --replace-fail ".virtual_monitor = (flags & SCREEN_CAST_SOURCE_TYPE_VIRTUAL) > 0," ".virtual_monitor = FALSE,"
+        '';
+      });
+    })
+  ];
 
   # Enable flakes.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -165,6 +185,9 @@
 
   # Enable nix-ld.
   programs.nix-ld.enable = true;
+
+  # Enable gpu-screen-recorder.
+  programs.gpu-screen-recorder.enable = true;
 
   # Enable UPower.
   services.upower.enable = true;

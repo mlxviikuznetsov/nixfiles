@@ -71,6 +71,7 @@ in
       "XF86AudioMute".action.spawn = noctalia "volume-mute";
       "XF86MonBrightnessUp".action.spawn = noctalia "brightness-up";
       "XF86MonBrightnessDown".action.spawn = noctalia "brightness-down";
+      "Mod+Print".action.spawn = [ "noctalia" "msg" "plugin" "noctalia/screen_recorder:service" "all" "toggle" ];
 
       # Programs
       "Mod+Return".action.spawn = "alacritty";
