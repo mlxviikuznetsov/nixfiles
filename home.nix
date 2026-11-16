@@ -28,6 +28,8 @@
     geonkick
     spotify
     foliate
+    papers
+    loupe
     uv
   ];
 
@@ -72,6 +74,30 @@
     iconTheme = {
       package = pkgs.papirus-icon-theme;
       name = "Papirus-Dark";
+    };
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = let
+      images = "org.gnome.Loupe.desktop";
+      docs = "org.gnome.Papers.desktop";
+    in {
+      "image/png" = images;
+      "image/jpeg" = images;
+      "image/gif" = images;
+      "image/webp" = images;
+      "image/svg+xml" = images;
+      "image/avif" = images;
+      "image/heif" = images;
+      "image/bmp" = images;
+      "image/tiff" = images;
+  
+      "application/pdf" = docs;
+      "image/vnd.djvu" = docs;
+      "application/postscript" = docs;
+      "application/x-cbz" = docs;
+      "application/vnd.comicbook+zip" = docs;
     };
   };
 
