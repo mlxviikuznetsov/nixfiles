@@ -16,6 +16,7 @@
     telegram-desktop
     whatsapp-electron
     libreoffice
+    kdePackages.kdenlive
     musescore
     audacity
     ardour
