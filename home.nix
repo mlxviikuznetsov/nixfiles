@@ -37,6 +37,7 @@
   imports = [
     ./home-manager/git.nix
     ./home-manager/zsh.nix
+    ./home-manager/nnn.nix
     ./home-manager/niri.nix
     ./home-manager/neovim.nix
     ./home-manager/alacritty.nix
@@ -62,10 +63,6 @@
   };
   programs.gh.enable = true;
   programs.tmux.enable = true;
-  programs.lf = {
-    enable = true;
-    keybindings.S = "$$SHELL";
-  };
   programs.mpv = {
     enable = true;
     config = {
