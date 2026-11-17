@@ -24,12 +24,14 @@
 - `home-manager/`: per-program modules (
   - `git.nix`,
   - `zsh.nix`,
+  - `nnn.nix`,
   - `direnv.nix`,
   - `niri.nix`,
   - `neovim.nix`,
   - `alacritty.nix`,
   - `fastfetch.nix`,
-  - `obs-studio.nix`
+  - `obs-studio.nix`,
+  - `tidalcycles.nix`
   )
 - `templates/rust/`: flake template with a Rust dev shell (`flake.nix`, `.envrc`)
 - `wallpapers/`: wallpapers (`nixos.png`)
