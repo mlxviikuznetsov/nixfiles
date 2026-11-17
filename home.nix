@@ -43,6 +43,7 @@
     ./home-manager/fastfetch.nix
     ./home-manager/obs-studio.nix
     ./home-manager/direnv.nix
+    ./home-manager/tidalcycles.nix
   ];
 
   # Customize modules here.
