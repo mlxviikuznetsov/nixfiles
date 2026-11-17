@@ -61,6 +61,7 @@
     };
   };
   programs.gh.enable = true;
+  programs.tmux.enable = true;
   programs.mpv = {
     enable = true;
     config = {
