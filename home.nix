@@ -9,7 +9,6 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     btop
-    nnn
     ffmpeg
     ripgrep
     wl-clipboard
@@ -62,6 +61,10 @@
   };
   programs.gh.enable = true;
   programs.tmux.enable = true;
+  programs.lf = {
+    enable = true;
+    keybindings.S = "$$SHELL";
+  };
   programs.mpv = {
     enable = true;
     config = {
