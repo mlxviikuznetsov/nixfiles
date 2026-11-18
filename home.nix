@@ -11,6 +11,9 @@
     btop
     ffmpeg
     ripgrep
+    codex
+    opencode
+    grok-build
     wl-clipboard
     xwayland-satellite
     telegram-desktop
