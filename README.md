@@ -59,7 +59,7 @@ There's also a small Rust dev shell template in `templates/rust/` that I use for
 
 **Step 1.** Clone the repo:
 ```sh
-   git clone https://github.com/mlxviikuznetsov/nixfiles ~/nixfiles
+   git clone https://github.com/nettzsu/nixfiles ~/nixfiles
    cd ~/nixfiles
 ```
 
@@ -82,5 +82,5 @@ To update inputs: `nix flake update`, then rebuild.
 Initialize a Rust dev shell flake:
 
 ```sh
-nix flake init -t github:mlxviikuznetsov/nixfiles#rust
+nix flake init -t github:nettzsu/nixfiles#rust
 ```
