@@ -32,6 +32,7 @@
     foliate
     papers
     loupe
+    gimp
     uv
   ];
 
